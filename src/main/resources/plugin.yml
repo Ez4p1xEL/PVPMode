@@ -1,6 +1,6 @@
 name: PVPMode
 main: p1xel.pvpmode.PVPMode
-version: 1.1
+version: 1.2
 api-version: 1.13
 commands:
   pvpmode:

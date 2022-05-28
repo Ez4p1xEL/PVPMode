@@ -27,7 +27,7 @@ public class ModeListener implements Listener {
         Entity ep = e.getEntity();
         Entity edamager = e.getDamager();
 
-        if (ep instanceof Player || edamager instanceof Player) {
+        if (ep instanceof Player && edamager instanceof Player) {
 
             Player p = (Player) ep;
             Player damager = (Player) edamager;

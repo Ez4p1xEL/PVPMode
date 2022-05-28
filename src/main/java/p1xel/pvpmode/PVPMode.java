@@ -7,11 +7,16 @@ import org.bukkit.plugin.java.JavaPlugin;
 import p1xel.pvpmode.Command.Cmd;
 import p1xel.pvpmode.Hook.HPAPI;
 import p1xel.pvpmode.Listeners.ModeListener;
+import p1xel.pvpmode.Listeners.ModeLock;
+import p1xel.pvpmode.SpigotMC.UpdateChecker;
 import p1xel.pvpmode.Storage.Config;
 import p1xel.pvpmode.Storage.Data;
 import p1xel.pvpmode.Storage.Locale;
+import p1xel.pvpmode.Storage.World;
 import p1xel.pvpmode.bStats.Metrics;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class PVPMode extends JavaPlugin {
@@ -30,14 +35,20 @@ public class PVPMode extends JavaPlugin {
         return Bukkit.getServer().getPluginManager().isPluginEnabled("Vault");
     }
 
+    public static List<String> getModeList() {
+        return Arrays.asList("peace","default","insane");
+    }
+
     @Override
     public void onEnable() {
         instance = this;
         saveDefaultConfig();
         Locale.createFile();
         Data.createFile();
+        World.createFile();
 
         getServer().getPluginCommand("PVPMode").setExecutor(new Cmd());
+        getServer().getPluginManager().registerEvents(new ModeLock(), this);
         getServer().getPluginManager().registerEvents(new ModeListener(), this);
 
         // Vault
@@ -63,6 +74,17 @@ public class PVPMode extends JavaPlugin {
         //
 
         getLogger().info("PVPMode " + Config.getVersion() + " loaded!");
+
+        if (Config.getBool("check-update")) {
+            new UpdateChecker(this, 102262).getVersion(version -> {
+                if (this.getDescription().getVersion().equals(version)) {
+                    getLogger().info(Locale.getMessage("update-check.latest"));
+                } else {
+                    getLogger().info(Locale.getMessage("update-check.outdate"));
+                }
+            });
+        }
+
     }
 
     private boolean setupEconomy() {
