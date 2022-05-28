@@ -119,7 +119,9 @@ public class Cmd implements CommandExecutor {
                     return true;
                 }
 
-                PVPMode.getEconomy().withdrawPlayer(p, Config.getInsaneCost());
+                if (PVPMode.isVaultEnabled()) {
+                    PVPMode.getEconomy().withdrawPlayer(p, Config.getInsaneCost());
+                }
                 PVPModeChangeEvent event = new PVPModeChangeEvent(p, "insane");
                 Bukkit.getServer().getPluginManager().callEvent(event);
                 sender.sendMessage(Locale.getMessage("mode-success").replaceAll("%mode%", Data.getModeLabel(sender.getName())));
