@@ -1,0 +1,32 @@
+Language: zh_CN
+Plugin: PVPMode
+commands:
+  top: '&8&m                                   '
+  top-space: '&f'
+  plugin: '         &b&l%plugin% %version%'
+  help: '&7/PVPMode help &6查看帮助'
+  mode: '&7/PVPMode <0/1/2/peace/default/insane> 切换模式'
+  mode-other: '&7/PVPMode <0/1/2/peace/default/insane> <player> 切换玩家的模式'
+  reload: '&7/PVPMode reload &6重载配置文件'
+  bottom-space: '&f'
+  bottom: '&8&m                                   '
+
+no-perm: '&7[&b%plugin%&7] &c你没有权限这么做!'
+blacklist-world: '&7[&b%plugin%&7] &c你所在的世界不允许这么做!'
+target-blacklist-world: '&7[&b%plugin%&7] &c玩家所在的世界不允许这么做!'
+must-be-player: '&7[&b%plugin%&7] &c你必须是名玩家!'
+invalid-player: '&7[&b%plugin%&7] &c未知玩家'
+insane-no-perm: '&7[&b%plugin%&7] &c你无法使用疯狂模式,因为它被禁用了!'
+no-money: '&7[&b%plugin%&7] &c你需要 %money% 金钱才能这么做!'
+
+reload-success: '&7[&b%plugin%&7] &a配置文件重载成功!'
+mode-success: '&7[&b%plugin%&7] &a你设置了你的模式为 &9%mode%&a!'
+mode-other-success: '&7[&b%plugin%&7] &a你设置了 &e%player%&a 的pvp模式为 &9%mode%&a!'
+mode-change: '&7[&b%plugin%&7] &a你的pvp模式被更改为 &9%mode%&a!'
+insane-trigger: '&7[&b%plugin%&7] &a你触发了疯狂伤害!'
+
+pvp-is-off: '&7[&b%plugin%&7] &c你或TA的PVP模式是和平!'
+
+peace: '和平'
+default: '默认'
+insane: '疯狂'

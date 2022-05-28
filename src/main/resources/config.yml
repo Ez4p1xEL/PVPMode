@@ -1,0 +1,16 @@
+# Version
+Version: 1.0
+
+Language: en
+
+insane:
+  enable: true
+  cost: 500
+  damage:
+    multiplier: 1.5
+
+# peace, default, insane
+default-mode: peace
+
+blacklist-world:
+  - 's1mple'
