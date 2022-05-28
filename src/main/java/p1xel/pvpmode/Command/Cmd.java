@@ -107,9 +107,11 @@ public class Cmd implements CommandExecutor {
 
                 Player p = (Player) sender;
 
-                if (PVPMode.getEconomy().getBalance(p) < Config.getInsaneCost()) {
-                    sender.sendMessage(Locale.getMessage("no-money").replaceAll("%money%", String.valueOf(Config.getInsaneCost())));
-                    return true;
+                if (PVPMode.isVaultEnabled()) {
+                    if (PVPMode.getEconomy().getBalance(p) < Config.getInsaneCost()) {
+                        sender.sendMessage(Locale.getMessage("no-money").replaceAll("%money%", String.valueOf(Config.getInsaneCost())));
+                        return true;
+                    }
                 }
 
                 if (Config.getStringList("blacklist-world").contains(p.getWorld().getName())) {

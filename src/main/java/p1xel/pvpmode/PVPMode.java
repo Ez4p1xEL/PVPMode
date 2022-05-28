@@ -1,6 +1,7 @@
 package p1xel.pvpmode;
 
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import p1xel.pvpmode.Command.Cmd;
@@ -25,7 +26,9 @@ public class PVPMode extends JavaPlugin {
 
     public static Logger log = Logger.getLogger("Minecraft");
 
-
+    public static boolean isVaultEnabled() {
+        return Bukkit.getServer().getPluginManager().isPluginEnabled("Vault");
+    }
 
     @Override
     public void onEnable() {
