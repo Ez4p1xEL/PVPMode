@@ -1,0 +1,52 @@
+Language: en
+Plugin: PVPMode
+commands:
+  top: '&8&m                                   '
+  top-space: '&f'
+  plugin: '         &b&l%plugin% %version%'
+  help: '&7/PVPMode help &6View help.'
+  info: '&7/PVPMode info <player> &6Check your/others mode'
+  mode: '&7/PVPMode <0/1/2/peace/default/insane> &6switch mode.'
+  mode-other: '&7/PVPMode <0/1/2/peace/default/insane> <player> &6switch players mode.'
+  create: '&7/PVPMode create <world> <mode> &6Create a world to lock the mode.'
+  remove: '&7/PVPMode remove <world> &6Remove the world.'
+  world-mode: '&7/PVPMode mode <world> <mode> &6Set the worlds mode.'
+  reload: '&7/PVPMode reload &6Reload the config.'
+  bottom-space: '&f'
+  bottom: '&8&m                                   '
+
+no-perm: '&7[&b%plugin%&7] &cYou have no permission to do that!'
+blacklist-world: '&7[&b%plugin%&7] &cThe world you are staying is not allow to change pvp mode!'
+target-blacklist-world: '&7[&b%plugin%&7] &cThe world that the player is staying is not allow to change pvp mode!'
+must-be-player: '&7[&b%plugin%&7] &cYou need to be a player to do that!'
+invalid-player: '&7[&b%plugin%&7] &cInvalid player.'
+insane-no-perm: '&7[&b%plugin%&7] &cYou cannot use insane mode because it get banned by the server.'
+no-money: '&7[&b%plugin%&7] &cYou need %money% money to do that.'
+already-is: '&7[&b%plugin%&7] &cYour mode is &9%mode% &calready!'
+wrong-mode: '&7[&b%plugin%&7] &cPlease type the mode correctly!'
+already-exist: '&7[&b%plugin%&7] &cThe world is already exist!'
+invalid-world: '&7[&b%plugin%&7] &cThe world is not exist!'
+mode-lock: '&7[&b%plugin%&7] &cYour world is locking mode set.'
+
+reload-success: '&7[&b%plugin%&7] &aConfiguration reloaded!'
+mode-success: '&7[&b%plugin%&7] &aYou set your pvp mode to &9%mode%&a!'
+mode-other-success: '&7[&b%plugin%&7] &aYou set &e%player%&a pvp mode to &9%mode%&a!'
+create-success: '&7[&b%plugin%&7] &aYou created world &9%world%&a.'
+remove-success: '&7[&b%plugin%&7] &aYou removed world &9%world%&a.'
+world-mode-success: '&7[&b%plugin%&7] &aYou set &9%world% &amode to &9%mode%&a.'
+mode-change: '&7[&b%plugin%&7] &aYour pvp mode is been changed to &9%mode%&a!'
+insane-trigger: '&7[&b%plugin%&7] &aYou triggered multiple damage!'
+timer-start: '&7[&b%plugin%&7] &aInsane mode starts! %time% second(s) left.'
+timer-end: '&7[&b%plugin%&7] &aInsane mode ends!'
+mode-info: '&7[&b%plugin%&7] &aMode of &e%player%&a: &9%mode%&a.'
+
+pvp-is-off: '&7[&b%plugin%&7] &cYour/His/Her PVP Mode is OFF!'
+
+peace: 'peace'
+default: 'default'
+insane: 'insane'
+
+update-check:
+  invalid: 'Unable to check for updates: '
+  latest: 'There is not a new update available.'
+  outdate: 'There is a new update available.'
