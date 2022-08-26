@@ -1,5 +1,5 @@
 # Version
-Version: 1.4
+Version: 1.5
 
 Language: en
 
@@ -30,3 +30,4 @@ check-update: true
 
 hook:
   citizens: false
+  vault: true

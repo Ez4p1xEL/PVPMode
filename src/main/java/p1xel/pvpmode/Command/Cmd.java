@@ -142,7 +142,12 @@ public class Cmd implements CommandExecutor {
                     if (PVPMode.getEconomy().getBalance(p) < Config.getInsaneCost()) {
                         sender.sendMessage(Locale.getMessage("no-money").replaceAll("%money%", String.valueOf(Config.getInsaneCost())));
                         return true;
+                    } else {
+                        PVPMode.getEconomy().withdrawPlayer(p, Config.getInsaneCost());
                     }
+                } else {
+                    sender.sendMessage(Locale.getMessage("vault-disable"));
+                    return true;
                 }
 
                 if (Config.getStringList("blacklist-world").contains(p.getWorld().getName())) {
@@ -153,10 +158,6 @@ public class Cmd implements CommandExecutor {
                 if (World.isWorldModeLocked(p.getWorld().getName())) {
                     sender.sendMessage(Locale.getMessage("mode-lock"));
                     return true;
-                }
-
-                if (PVPMode.isVaultEnabled()) {
-                    PVPMode.getEconomy().withdrawPlayer(p, Config.getInsaneCost());
                 }
 
                 if (Config.getBool("insane.timer.enable")) {

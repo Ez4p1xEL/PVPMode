@@ -27,6 +27,7 @@ wrong-mode: '&7[&b%plugin%&7] &c请输入正确的模式!'
 already-exist: '&7[&b%plugin%&7] &c这个世界已经存在!'
 invalid-world: '&7[&b%plugin%&7] &c这个世界并不存在!'
 mode-lock: '&7[&b%plugin%&7] &c当前世界锁定了模式'
+vault-disable: '&7[&b%plugin%&7] &cVault 未启用!'
 
 reload-success: '&7[&b%plugin%&7] &a配置文件重载成功!'
 mode-success: '&7[&b%plugin%&7] &a你设置了你的模式为 &9%mode%&a!'

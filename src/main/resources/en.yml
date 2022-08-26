@@ -27,6 +27,7 @@ wrong-mode: '&7[&b%plugin%&7] &cPlease type the mode correctly!'
 already-exist: '&7[&b%plugin%&7] &cThe world is already exist!'
 invalid-world: '&7[&b%plugin%&7] &cThe world is not exist!'
 mode-lock: '&7[&b%plugin%&7] &cYour world is locking mode set.'
+vault-disable: '&7[&b%plugin%&7] &cVault is not enabled!'
 
 reload-success: '&7[&b%plugin%&7] &aConfiguration reloaded!'
 mode-success: '&7[&b%plugin%&7] &aYou set your pvp mode to &9%mode%&a!'
