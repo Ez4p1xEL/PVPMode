@@ -12,19 +12,28 @@ import java.util.List;
 
 public class Locale {
 
+    static File file;
+    static FileConfiguration yaml;
+
     public static void createFile() {
         List<String> lang = Arrays.asList("en","zh_CN");
         for (String l : lang) {
-            File file = new File(PVPMode.getInstance().getDataFolder(), l + ".yml");
-            if (!file.exists()) {
+            File filew = new File(PVPMode.getInstance().getDataFolder(), l + ".yml");
+            if (!filew.exists()) {
                 PVPMode.getInstance().saveResource(l + ".yml", false);
             }
         }
+
+        upload(new File(PVPMode.getInstance().getDataFolder(), Config.getLanguage() + ".yml"));
+    }
+
+    public static void upload(File filew) {
+        file = filew;
+        yaml = YamlConfiguration.loadConfiguration(filew);
     }
 
     public static FileConfiguration get() {
-        File file = new File(PVPMode.getInstance().getDataFolder(), Config.getLanguage() + ".yml");
-        return YamlConfiguration.loadConfiguration(file);
+        return yaml;
     }
 
     public static String getMessage(String path) {

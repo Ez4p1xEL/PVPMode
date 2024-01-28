@@ -62,6 +62,9 @@ public class Cmd implements CommandExecutor {
                 }
 
                 Config.reloadConfig();
+                Data.createFile();
+                Locale.createFile();
+                World.createFile();
                 sender.sendMessage(Locale.getMessage("reload-success"));
                 return true;
 

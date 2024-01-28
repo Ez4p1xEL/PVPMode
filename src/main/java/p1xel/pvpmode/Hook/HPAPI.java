@@ -12,7 +12,7 @@ public class HPAPI extends PlaceholderExpansion {
     }
 
     public String getAuthor() {
-        return "p1xEL_mc";
+        return "Ez4p1xEL";
     }
 
     public String getVersion() {

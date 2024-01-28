@@ -9,25 +9,31 @@ import java.io.IOException;
 
 public class World {
 
+    static File file;
+    static FileConfiguration yaml;
+
     public static void createFile() {
-        File file = new File(PVPMode.getInstance().getDataFolder(), "worlds.yml");
-        if (!file.exists()) {
+        File filew = new File(PVPMode.getInstance().getDataFolder(), "worlds.yml");
+        if (!filew.exists()) {
             try {
-                file.createNewFile();
+                filew.createNewFile();
             } catch (IOException ioException) {
                 PVPMode.getInstance().getLogger().info("Can't create worlds file. Please ask the author for help!");
             }
         }
+        upload(filew);
+    }
+
+    public static void upload(File filew) {
+        file = filew;
+        yaml = YamlConfiguration.loadConfiguration(filew);
     }
 
     public static FileConfiguration get() {
-        File file = new File(PVPMode.getInstance().getDataFolder(), "worlds.yml");
-        return YamlConfiguration.loadConfiguration(file);
+        return yaml;
     }
 
     public static void set(String path, Object value) {
-        File file = new File(PVPMode.getInstance().getDataFolder(), "worlds.yml");
-        FileConfiguration yaml = YamlConfiguration.loadConfiguration(file);
         yaml.set(path,value);
         try {
             yaml.save(file);
