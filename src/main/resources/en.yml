@@ -1,0 +1,96 @@
+Language: en
+Plugin: PVPMode
+commands:
+  top: '&8&m                                   '
+  top-space: '&f'
+  plugin: '         &b&l%plugin% %version%'
+  empty: '&7/PVPMode &6Open menu.'
+  help: '&7/PVPMode help &6View help.'
+  info: '&7/PVPMode info <player> &6Check your/others mode'
+  mode: '&7/PVPMode <0/1/2/peace/default/insane> &6switch mode.'
+  mode-other: '&7/PVPMode <0/1/2/peace/default/insane> <player> &6switch players mode.'
+  create: '&7/PVPMode create <world> <mode> &6Create a world to lock the mode.'
+  remove: '&7/PVPMode remove <world> &6Remove the world.'
+  world-mode: '&7/PVPMode mode <world> <mode> &6Set the worlds mode.'
+  reload: '&7/PVPMode reload &6Reload the config.'
+  bottom-space: '&f'
+  bottom: '&8&m                                   '
+
+no-perm: '&7[&b%plugin%&7] &cYou have no permission to do that!'
+blacklist-world: '&7[&b%plugin%&7] &cThe world you are staying is not allow to change pvp mode!'
+target-blacklist-world: '&7[&b%plugin%&7] &cThe world that the player is staying is not allow to change pvp mode!'
+must-be-player: '&7[&b%plugin%&7] &cYou need to be a player to do that!'
+invalid-player: '&7[&b%plugin%&7] &cInvalid player.'
+insane-no-perm: '&7[&b%plugin%&7] &cYou cannot use insane mode because it get banned by the server.'
+no-money: '&7[&b%plugin%&7] &cYou need %money% money to do that.'
+already-is: '&7[&b%plugin%&7] &cYour mode is &9%mode% &calready!'
+wrong-mode: '&7[&b%plugin%&7] &cPlease type the mode correctly!'
+already-exist: '&7[&b%plugin%&7] &cThe world is already exist!'
+invalid-world: '&7[&b%plugin%&7] &cThe world is not exist!'
+mode-lock: '&7[&b%plugin%&7] &cYour world is locking mode set.'
+vault-disable: '&7[&b%plugin%&7] &cVault is not enabled!'
+
+reload-success: '&7[&b%plugin%&7] &aConfiguration reloaded!'
+mode-success: '&7[&b%plugin%&7] &aYou set your pvp mode to &9%mode%&a!'
+mode-other-success: '&7[&b%plugin%&7] &aYou set &e%player%&a pvp mode to &9%mode%&a!'
+create-success: '&7[&b%plugin%&7] &aYou created world &9%world%&a.'
+remove-success: '&7[&b%plugin%&7] &aYou removed world &9%world%&a.'
+world-mode-success: '&7[&b%plugin%&7] &aYou set &9%world% &amode to &9%mode%&a.'
+mode-change: '&7[&b%plugin%&7] &aYour pvp mode is been changed to &9%mode%&a!'
+insane-trigger: '&7[&b%plugin%&7] &aYou triggered multiple damage!'
+timer-start: '&7[&b%plugin%&7] &aInsane mode starts! %time% second(s) left.'
+timer-end: '&7[&b%plugin%&7] &aInsane mode ends!'
+mode-info: '&7[&b%plugin%&7] &aMode of &e%player%&a: &9%mode%&a.'
+inv-open: '&7[&b%plugin%&7] &aOpening PVP selection menu...'
+
+pvp-is-off: '&7[&b%plugin%&7] &cYour/His/Her PVP Mode is OFF!'
+
+peace: 'peace'
+default: 'default'
+insane: 'insane'
+
+menu:
+  size: 27
+  title: 'PVP Mode Selection'
+  peace:
+    material: GRASS_BLOCK
+    display_name: '&aPeaceful mode &7(%status%&7)'
+    slot: 11
+    lore:
+      - ''
+      - '&7No one is able to damage you.'
+      - '&7Of course you can''t do it also!'
+      - ''
+      - '&e%click%'
+  default:
+    material: EXPERIENCE_BOTTLE
+    display_name: '&aDefault mode &7(%status%&7)'
+    slot: 13
+    lore:
+      - ''
+      - '&7Vanilla Minecraft with PVP enabled'
+      - '&7Is he/she friendly?'
+      - ''
+      - '&e%click%'
+  insane:
+    material: DIAMOND_SWORD
+    display_name: '&6Insane mode &7(%status%&7)'
+    slot: 15
+    lore:
+      - ''
+      - '&7Evil killer'
+      - '&7But you also get corrupted by devil!'
+      - ''
+      - '&e%click%'
+  #custom_model_data: 114514
+  status:
+    off: '&cDisabled'
+    on: '&aCurrent mode'
+  click:
+    off: '&6> &eClick to switch to this mode'
+    on: '&6> &cThis is your current mode'
+
+update-check:
+  invalid: 'Unable to check for updates: '
+  latest: 'There is not a new update available.'
+  outdate: 'There is a new update available.'

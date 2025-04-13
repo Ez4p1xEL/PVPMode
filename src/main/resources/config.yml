@@ -1,0 +1,32 @@
+# Version
+Version: 1.6
+
+Language: en
+
+insane:
+  enable: true
+  # only work at self executing the command /pvp 2.
+  cost: 500
+  # only work at self executing the command /pvp 2.
+  timer:
+    enable: true
+    # second
+    time: 90
+  damage:
+    multiplier: 1.5
+
+worlds-settings:
+  default:
+    permission: pvpmode.bypasslock
+
+# peace, default, insane
+default-mode: peace
+
+# command /pvp 0/1/2
+blacklist-world:
+  - 's1mple'
+
+check-update: true
+
+hook:
+  vault: true

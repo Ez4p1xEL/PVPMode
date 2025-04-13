@@ -1,0 +1,92 @@
+Language: zh_CN
+Plugin: PVPMode
+commands:
+  top: '&8&m                                   '
+  top-space: '&f'
+  plugin: '         &b&l%plugin% %version%'
+  empty: '&7/PVPMode &6打开菜单'
+  help: '&7/PVPMode help &6查看帮助'
+  info: '&7/PVPMode info <玩家> &6查看你/别人的模式'
+  mode: '&7/PVPMode <0/1/2/peace/default/insane> &6切换模式'
+  mode-other: '&7/PVPMode <0/1/2/peace/default/insane> <玩家> &6切换玩家的模式'
+  create: '&7/PVPMode create <世界> <模式> &6创建世界以锁定模式'
+  remove: '&7/PVPMode remove <世界> &6移除世界'
+  world-mode: '&7/PVPMode mode <世界> <模式> &6设置世界的模式锁定'
+  reload: '&7/PVPMode reload &6重载配置文件'
+  bottom-space: '&f'
+  bottom: '&8&m                                   '
+
+no-perm: '&7[&b%plugin%&7] &c你没有权限这么做!'
+blacklist-world: '&7[&b%plugin%&7] &c你所在的世界不允许这么做!'
+target-blacklist-world: '&7[&b%plugin%&7] &c玩家所在的世界不允许这么做!'
+must-be-player: '&7[&b%plugin%&7] &c你必须是名玩家!'
+invalid-player: '&7[&b%plugin%&7] &c未知玩家'
+insane-no-perm: '&7[&b%plugin%&7] &c你无法使用疯狂模式,因为它被禁用了!'
+no-money: '&7[&b%plugin%&7] &c你需要 %money% 金钱才能这么做!'
+already-is: '&7[&b%plugin%&7] &c你的模式已经是 &9%mode% &c了!'
+wrong-mode: '&7[&b%plugin%&7] &c请输入正确的模式!'
+already-exist: '&7[&b%plugin%&7] &c这个世界已经存在!'
+invalid-world: '&7[&b%plugin%&7] &c这个世界并不存在!'
+mode-lock: '&7[&b%plugin%&7] &c当前世界锁定了模式'
+vault-disable: '&7[&b%plugin%&7] &cVault 未启用!'
+
+reload-success: '&7[&b%plugin%&7] &a配置文件重载成功!'
+mode-success: '&7[&b%plugin%&7] &a你设置了你的模式为 &9%mode%&a!'
+mode-other-success: '&7[&b%plugin%&7] &a你设置了 &e%player%&a 的pvp模式为 &9%mode%&a!'
+create-success: '&7[&b%plugin%&7] &a你创建了世界 &9%world%'
+remove-success: '&7[&b%plugin%&7] &a你移除了世界 &9%world%'
+world-mode-success: '&7[&b%plugin%&7] &a你设置了世界 &9%world% &a的锁定模式为 &9%mode%'
+mode-change: '&7[&b%plugin%&7] &a你的pvp模式被更改为 &9%mode%&a!'
+insane-trigger: '&7[&b%plugin%&7] &a你触发了疯狂伤害!'
+timer-start: '&7[&b%plugin%&7] &a疯狂模式开始! 剩余 %time% 秒'
+timer-end: '&7[&b%plugin%&7] &a疯狂模式结束'
+mode-info: '&7[&b%plugin%&7] &e%player%&a的模式: &9%mode%&a'
+inv-open: '&7[&b%plugin%&7] &a正在为你打开PVP选择菜单...'
+
+pvp-is-off: '&7[&b%plugin%&7] &c你或TA的PVP模式是和平!'
+
+peace: '和平'
+default: '默认'
+insane: '疯狂'
+
+menu:
+  size: 27
+  title: 'PVP模式选择'
+  peace:
+    display_name: '&a和平模式 &7(%status%&7)'
+    slot: 11
+    lore:
+      - ''
+      - '&7没有人可以伤害你.'
+      - '&7当然你也不能伤害别人!'
+      - ''
+      - '&e%Click%'
+  default:
+    display_name: '&a默认模式 &7(%status%&7)'
+    slot: 13
+    lore:
+      - ''
+      - '&7最原版的Minecraft战斗'
+      - '&7TA是友善的吗?'
+      - ''
+      - '&e%Click%'
+  insane:
+    display_name: '&6疯狂模式 &7(%status%&7)'
+    slot: 15
+    lore:
+      - ''
+      - '&7邪恶的杀手'
+      - '&7但你也会被恶魔侵蚀!'
+      - ''
+      - '&e%Click%'
+  status:
+    off: '&c未启用'
+    on: '&a当前已启用'
+  click:
+    off: '&6> &e点击切换至该模式'
+    on: '&6> &c无法切换'
+
+update-check:
+  invalid: '无法检查更新: '
+  latest: '没有可用的更新'
+  outdate: '有可用的更新'
